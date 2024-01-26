@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INICIAL</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+        }
+
+        #principal {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background-color :darkred;
+        }
+
+        .subdiv {
+            position: absolute;
+            background-color: black;
+        }
+
+        #izquierda {
+            margin-top: 20px;
+            margin-left: 10px;
+            width: 400px;
+            height: 750px;
+            background-color: darkgrey;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            z-index: 0;
+            border: 3px solid white;
+            border-radius: 10px;
+            box-shadow: 2px 2px 10px white;
+z-index: 0;
+        }
+#calendario {
+  position: absolute;
+  border: 1px solid #ccc;
+  padding: 20px;
+  color: black;
+  margin-top: 400px;
+  margin-left: 10px;
+  width: 260px;
+  height: 230px;
+z-index: 2;
+}
+
+#imgcal {
+  background-image: url('fuji.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  border: 1px solid #ccc;
+  color: white;
+  margin-top: 10px;
+  margin-left: 10px;
+  width: 380px;
+  height: 350px;
+}
+        #notas {
+            margin-top: 20px;
+            margin-left: 450px;
+            width: 690px;
+            height: 750px;
+            background-color: darkgrey;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            z-index: 0;
+            border: 3px solid white;
+            border-radius: 10px;
+            box-shadow: 2px 2px 10px white;
+        }
+        #objetivos {
+            margin-top: 20px;
+            margin-left: 1170px;
+            width: 640px;
+            height: 250px;
+            background-color: darkgrey;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            z-index: 0;
+            border: 3px solid white;
+            border-radius: 10px;
+            box-shadow: 2px 2px 10px white;
+        }
+        #coleccion {
+            margin-top: 350px;
+            margin-left: 1170px;
+            width: 580px;
+            height: 400px;
+            background-color: darkgrey;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            z-index: 0;
+            border: 3px solid white;
+            border-radius: 10px;
+            box-shadow: 2px 2px 10px white;
+        }
+        #cardJug1,
+        #cardJug2,
+        #cardJug3,
+        #cardJug4,
+        #cardJug5,
+        #cardJug6,
+        #cardJug7,
+        #cardJug8,
+        #cardJug9,
+        #cardJug10,
+        #cardJug11 {
+            position: absolute;
+            background-color: black;
+            color: white;
+            border: 3px solid white;
+            border-radius: 10px;
+            box-shadow: 2px 2px 10px white;
+            width: 650px;
+            height: 50px;
+            cursor: pointer;
+            transition: transform 0.3s;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            font-size: 40px;
+            text-align: center;
+        }
+
+        #cardJug1 {
+            margin-top: 0px;
+            margin-left: 10px;
+        }
+
+        #cardJug2 {
+            margin-top: 60px;
+            margin-left: 10px;
+        }
+
+        #cardJug3 {
+            margin-top: 130px;
+            margin-left: 10px;
+        }
+        #cardJug4 {
+            margin-top: 200px;
+            margin-left: 10px;
+        }
+        #cardJug5 {
+            margin-top: 270px;
+            margin-left: 10px;
+        }
+
+        #cardJug6 {
+            margin-top: 340px;
+            margin-left: 10px;
+        }
+
+        #cardJug7 {
+            margin-top: 410px;
+            margin-left: 10px;
+        }
+        #cardJug8 {
+            margin-top: 480px;
+            margin-left: 10px;
+        }
+        #cardJug9 {
+            margin-top: 550px;
+            margin-left: 10px;
+        }
+
+        #cardJug10 {
+            margin-top: 620px;
+            margin-left: 10px;
+        }
+        #cardJug11 {
+            margin-top: 690px;
+            margin-left: 10px;
+        }
+        #daruma1,
+        #daruma2,
+        #daruma3,
+        #daruma4 {
+            position: absolute;
+            color: white;
+            border: 3px solid white;
+            border-radius: 10px;
+            box-shadow: 2px 2px 10px white;
+            width: 150px;
+            height: 200px;
+            cursor: pointer;
+            transition: transform 0.3s;
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        #daruma1 {
+            margin-top: 10px;
+            margin-left: 5px;
+            background-image: url('darum.png');
+        }
+        #daruma2 {
+            margin-top: 10px;
+            margin-left: 160px;
+            background-image: url('darum.png');
+        }
+        #daruma3 {
+            margin-top: 10px;
+            margin-left: 320px;
+            background-image: url('darum.png');
+        }
+        #daruma4 {
+            margin-top: 10px;
+            margin-left: 480px;
+            background-image: url('darum.png');
+        }
+
+        #cardJug1:hover,
+        #cardJug2:hover,
+        #cardJug3:hover,
+        #cardJug4:hover,
+        #cardJug5:hover,
+        #cardJug6:hover,
+        #cardJug7:hover,
+        #cardJug8:hover,
+        #cardJug9:hover,
+        #cardJug10:hover,
+        #cardJug11:hover,
+        #daruma1:hover,
+        #daruma2:hover,
+        #daruma3:hover,
+        #daruma4:hover
+                           {
+            transform: scale(1.1);
+        }
+
+        #divDataGame {
+            line-height: 50px;
+            text-align: center;
+            margin-top: 400px;
+            margin-left: 10px;
+            width: 380px;
+            height: 50px;
+            background-color: black;
+            font-size: 18px;
+            position: absolute;
+            border: 3px solid white;
+            border-radius: 10px;
+            box-shadow: 2px 2px 10px white;
+            color: white;
+        }
+
+        #mostcalendar {
+            margin-top: 20px;
+            margin-left: 430px;
+            width: 720px;
+            height: 750px;
+            background-image: url('calendario.jpg');
+            position: absolute;
+            border: 3px solid white;
+            border-radius: 10px;
+            box-shadow: 2px 2px 10px white;
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        #nota {
+            margin-top: 20px;
+            margin-left: 430px;
+            width: 720px;
+            height: 750px;
+            background-color:black;
+            position: absolute;
+            border: 3px solid white;
+            border-radius: 10px;
+            box-shadow: 2px 2px 10px white;
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        #titulo {
+
+            margin-top: 50px;
+            margin-left: 10px;
+            width: 680px;
+            height: 50px;
+            background-color: darkgrey;
+            position: absolute;
+            border: 3px solid white;
+            border-radius: 10px;
+            box-shadow: 2px 2px 10px white;
+            color: white;
+            font-size: 40px;
+            text-align: center;
+        }
+        #datanota {
+            line-height: 50px;
+            text-align: center;
+            margin-top: 150px;
+            margin-left: 10px;
+            width: 680px;
+            height:200px;
+            background-color: black;
+            font-size: 18px;
+            position: absolute;
+            border: 3px solid white;
+            border-radius: 10px;
+            box-shadow: 2px 2px 10px white;
+            color: white;
+        }
+        #Inputnota {
+            line-height: 50px;
+            text-align: center;
+            margin-top: 450px;
+            margin-left: 10px;
+            width: 680px;
+            height:200px;
+            background-color: darkgrey;
+            font-size: 18px;
+            position: absolute;
+            border: 3px solid white;
+            border-radius: 10px;
+            box-shadow: 2px 2px 10px white;
+            color: white;
+        }
+        #button1 {
+            line-height: 50px;
+            text-align: center;
+            margin-top: 380px;
+            margin-left: 180px;
+            width: 380px;
+            height: 50px;
+            background-color: black;
+            font-size: 18px;
+            position: absolute;
+            border: 3px solid white;
+            border-radius: 10px;
+            box-shadow: 2px 2px 10px white;
+            color: white;
+        }
+
+@keyframes imageAnimation {
+  0% { opacity: 1; }
+  50% { opacity: 0; }
+  100% { opacity: 1; }
+}
+.animation {
+  animation: imageAnimation 1s infinite;
+}
+
+        td.hoy {
+            background-color: #4CAF50; /* Color de fondo para resaltar el día actual */
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+  <div id="principal">
+        <div id="imgbanner-container">
+            <img src="logo.png" alt="Banner.Image" id="imgbanner">
+        </div>
+        <div id="izquierda" class="subdiv">
+            <img id="imgcal" onclick="partidaCard1()">
+	    <div id="divDataGame" onclick="mostrarcalend()"></div>
+	    
+        </div>
+        <div id="notas" class="subdiv">
+            <div id="cardJug1" onclick="alertanota1()"></div>
+            <div id="cardJug2" onclick="alertanota2()"></div>
+            <div id="cardJug3" onclick="alertanota3()"></div>
+            <img id="cardJug4" onclick="partidaCard1()">
+            <img id="cardJug5" onclick="partidaCard1()">
+            <img id="cardJug6" onclick="partidaCard2()">
+            <img id="cardJug7" onclick="partidaCard3()">
+            <img id="cardJug8" onclick="partidaCard1()">
+            <img id="cardJug9" onclick="partidaCard1()">
+            <img id="cardJug10" onclick="partidaCard2()">
+            <img id="cardJug11" onclick="partidaCard3()">
+        </div>
+        <div id="objetivos" class="subdiv">
+            <img id="daruma1" onclick="partidaCard1()">
+            <img id="daruma2" onclick="partidaCard2()">
+            <img id="daruma3" onclick="partidaCard3()">
+            <img id="daruma4" onclick="partidaCard1()">
+        </div>
+        <div id="coleccion" class="subdiv">
+            <!-- Contenido de coleccion -->
+        </div>
+	<img id="mostcalendar" onclick="ocultar()">
+	 <div id="nota">
+         <input type="text" id="titulo" placeholder=" Titulo..."></input>
+	 <div id="datanota"></div>
+   	 <input type="text" id="Inputnota" placeholder="Escribe nota...">
+   	 <button id="button1" onclick="guardarEnVariable()">Guardar mi nota</button>
+         </div>
+    </div>
+
+        <script>
+           
+mostcalendar.style.display = "none";
+nota.style.display = "none";
+var select=0;
+var textonota1 = localStorage.getItem('miVariableTexto1') || '';
+var titulo1 = localStorage.getItem('mititulo1') || '';
+var titulo2 = localStorage.getItem('mititulo2') || '';
+var titulo3 = localStorage.getItem('mititulo3') || '';
+
+var textonota2 = localStorage.getItem('miVariableTexto2') || '';
+var textonota3 = localStorage.getItem('miVariableTexto3') || '';
+const fechaActual = new Date();
+const opcionesFecha = { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' };
+const fechaFormateada = fechaActual.toLocaleDateString('es-ES', opcionesFecha);
+const hora = fechaActual.getHours();
+const minutos = fechaActual.getMinutes();
+
+cardJug1.textContent = titulo1;
+cardJug2.textContent = titulo2;
+cardJug3.textContent = titulo3;
+divDataGame.style.color = "white";
+divDataGame.textContent = "Hoy es : " + fechaFormateada;
+
+function mostrarcalend(){
+   mostcalendar.style.display = "block";
+}
+function ocultar(){
+   mostcalendar.style.display = "none";
+}
+
+function alertanota1(){
+select = 1;
+nota.style.display = "block";
+datanota.textContent = textonota1;
+}
+function alertanota2(){
+select = 2;
+nota.style.display = "block";
+datanota.textContent = textonota2;
+}
+function alertanota3(){
+select = 3;
+nota.style.display = "block";
+datanota.textContent = textonota3;
+}
+
+
+function guardarEnVariable() {
+switch(select){
+case 1:
+var inputElement = document.getElementById('Inputnota');
+textonota1 = inputElement.value;
+localStorage.setItem('miVariableTexto1', textonota1);
+
+var inputElement2 = document.getElementById('titulo');
+titulo1 = inputElement2.value;
+localStorage.setItem('mititulo1', titulo1);
+alertanota1();
+break;
+
+case 2:
+var inputElement = document.getElementById('Inputnota');
+textonota2 = inputElement.value;
+localStorage.setItem('miVariableTexto2', textonota2);
+
+var inputElement2 = document.getElementById('titulo');
+titulo2 = inputElement2.value;
+localStorage.setItem('mititulo2', titulo2);
+alertanota2();
+break;
+
+case 3:
+var inputElement = document.getElementById('Inputnota');
+textonota3 = inputElement.value;
+localStorage.setItem('miVariableTexto3', textonota3);
+var inputElement2 = document.getElementById('titulo');
+titulo3 = inputElement2.value;
+localStorage.setItem('mititulo3', titulo3);
+alertanota3();
+break;
+}
+}
+   
+        </script>
+
+</body>
+
+</html>
